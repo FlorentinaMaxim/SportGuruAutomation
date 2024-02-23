@@ -26,6 +26,8 @@ public class SignInPage extends BasePage {
     private By clickSignIn = By.xpath("//*[@id=\"html-body\"]/div[2]/header/div[2]/ul[1]/li[1]/a");
     private By closeNews = By.xpath("//button[@aria-label='Close dialog 1']");
     private By nuMultumesc = By.id("onesignal-slidedown-cancel-button");
+    private By InsertEmail = By.id("email");
+    private By InsertPassword = By.xpath("//input[@type='password' and @title='Parola']");
 
     public void clickCloseNews() {
         LOG.info("click close newsletter button");
@@ -41,4 +43,12 @@ public class SignInPage extends BasePage {
         LOG.info("click NuMultumesc button");
         driver.findElement(nuMultumesc).click();
     }
+
+    public void insertemail(String email, String password) {
+        LOG.info("Input 'Email adress' in field");
+        driver.findElement(InsertEmail).sendKeys(email);
+        driver.findElement(InsertPassword).sendKeys(password);
+
+    }
+
 }

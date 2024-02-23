@@ -12,6 +12,9 @@ public class SignInTest extends BaseTest {
 
     public void signIn() {
 
+        String email = "floryalexe@gmail.com";
+        String password = "12345Parola";
+
 
         LOG.info("click close Newsletter");
         signInPage.clickCloseNews();
@@ -21,6 +24,9 @@ public class SignInTest extends BaseTest {
 
         LOG.info("click sign in button");
         signInPage.clickSignIn();
+
+        LOG.info("Insert 'Email'");
+        signInPage.insertemail(email, password);
 
 
     }
