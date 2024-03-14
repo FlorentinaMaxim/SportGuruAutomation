@@ -1,26 +1,25 @@
-package tests.SignInTest;
+package tests.SearchAndFavTest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
+import pages.SearchAndFav.SearchAndFav;
 import tests.BaseTest;
 
-public class SignInTest extends BaseTest {
-    public static final Logger LOG = LoggerFactory.getLogger(SignInTest.class);
+public class SearchAndFavTest extends BaseTest {
+    public static final Logger LOG = LoggerFactory.getLogger(SearchAndFavTest.class);
 
     @Test
 
-    public void signIn() {
-
+    public void searchAndFav() {
         String email = "floryalexe@gmail.com";
         String password = "12345Parola";
 
+        String OchelariSnowboard = "POC ZONULA BLUE";
 
         LOG.info("click close Newsletter");
         signInPage.clickCloseNews();
 
-//        LOG.info("click NuMultumesc button");
-//        signInPage.clickNuMultumesc();
 
         LOG.info("click sign in button");
         signInPage.clickSignIn();
@@ -31,7 +30,10 @@ public class SignInTest extends BaseTest {
         LOG.info("click Autentificare");
         signInPage.clickAutentificare();
 
-//assert element pagina dupa login
-    }
 
+        LOG.info("click Search Bar");
+        searchAndFav.clickSearchAndFav(OchelariSnowboard);
+
+
+    }
 }
